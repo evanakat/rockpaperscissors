@@ -3,10 +3,17 @@ import random
 lives = 3
 count = 0
 
+print('*type either rock, paper, or scissors*')
+
 while lives > 0:
 
-    print(f"You have {lives} lives, play wisely")
+    print(f"**You have {lives} lives, play wisely**")
+
     player1 = input('Make your move: ').lower()
+    
+    if player1 == "quit":
+    	break
+    
     rand_num = random.randint(0,2)
 
     if rand_num == 0:
